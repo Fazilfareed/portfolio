@@ -1,115 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohomad Fazil</title>
-    <style>
-        body{
-            width: 50vw;
-            margin:0 auto;
-            text-align: justify;
-        }
-        
-        .boldText{
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <h1>MOHOMAD FAZIL</h1>
-    <img src="profile.png" alt="profile phot" width="200px" height="200px" style="border-radius: 50%;">
-    
-    <p><span class="boldText">Email:</span> fazilfrd9@gmail.com</p>
-    <p><span class="boldText">Phone Number:</span> (+94) 729755982</p>
-    <p><span class="boldText">Home Address:</span> No 8B, Rathwaththa Mawatha, Badulla, Sri Lanka.</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mohomad Fazil — Portfolio</title>
+    <meta
+      name="description"
+      content="Mohomad Fazil — Computer Science undergraduate. Projects: MERN, ML, Networking, IoT."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // optional Tailwind config (custom colors, fonts)
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { brand: { DEFAULT: "#0f172a", warm: "#0369a1" } },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- NAV -->
+    <header class="bg-white shadow-sm sticky top-0 z-30">
+      <div
+        class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-3">
+          <img
+            src="assets/profile.png"
+            alt="Mohomad Fazil photo"
+            class="w-10 h-10 rounded-full object-cover border"
+          />
+          <span class="font-semibold">Mohomad Fazil</span>
+        </a>
+        <nav class="hidden md:flex gap-6 text-sm">
+          <a href="#about" class="hover:text-warm">About</a>
+          <a href="#projects" class="hover:text-warm">Projects</a>
+          <a href="#experience" class="hover:text-warm">Experience</a>
+          <a href="#contact" class="hover:text-warm">Contact</a>
+          <a href="cv.pdf" class="px-3 py-1 border rounded text-sm"
+            >Download CV</a
+          >
+        </nav>
 
-    <h2><u>Professional Summary</u></h2>
-    
-    <p>
-        I am a dedicated Level 2 undergraduate student pursuing a degree in Computer Science at the University of Jaffna. My academic journey is marked by a strong foundation in programming, algorithms, and software development. I am particularly interested in cybersecurity and ethical hacking, aiming to leverage my skills to make a positive impact in the tech industry.
-        <br><br>
-        I have actively participated in several programming competitions, which have honed my problem-solving abilities and exposed me to real-world coding challenges. These experiences have strengthened my skills in various programming languages and development tools.
-        <br><br>
-        While I have not yet worked in a professional setting, I thrive in collaborative environments and enjoy working on innovative solutions to complex problems. As I continue my studies, I am eager to expand my knowledge and contribute to cutting-edge technological advancements.
-    </p>
+        <!-- mobile menu toggle -->
+        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-slate-100">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 8h16M4 16h16"
+            />
+          </svg>
+        </button>
+      </div>
 
-    <h2><u>Experience</u></h2>
-    <ul>
-        <li>Programming Competitions Participant</li>
-        <ul>
-            <li>Actively participated in several local and national programming competitions, showcasing problem-solving skills and coding proficiency.</li>
-            <li>Collaborated with team members to develop efficient algorithms and solutions under time constraints.</li>  
-            <li>Gained hands-on experience in various programming languages, including Python, Java, and C++, enhancing versatility and adaptability.</li>  
-            <li>Demonstrated ability to think critically and work under pressure, achieving top positions in multiple contests.</li>
-            <li>Developed strong analytical skills and a keen eye for detail, essential for debugging and optimizing code.</li>
-        </ul>
-    </ul>
-    
-    
+      <!-- mobile nav -->
+      <div id="mobileNav" class="md:hidden hidden border-t">
+        <div class="px-6 py-4 flex flex-col gap-3">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+          <a href="cv.pdf" class="inline-block mt-1 px-3 py-1 border rounded"
+            >Download CV</a
+          >
+        </div>
+      </div>
+    </header>
 
-    <h2><u>Education</u></h2>
-    <ul>
-        <li>BSc in Computer Science (Ongoing)</li>
-        <ul>
-            <li>University of Jaffna</li>
-            <li>Expected Graduation: [2026]</li>
-        </ul>
+    <main class="max-w-5xl mx-auto px-6 py-10">
+      <!-- HERO -->
+      <section id="about" class="grid md:grid-cols-3 gap-8 items-center">
+        <div
+          class="md:col-span-1 flex flex-col items-center md:items-start text-center md:text-left"
+        >
+          <img
+            src="assets/profile.png"
+            alt="Profile photo"
+            class="w-40 h-40 rounded-full object-cover border-4 border-white shadow-lg"
+          />
+          <h1 class="mt-4 text-2xl font-bold">Mohomad Fazil</h1>
+          <p class="text-sm text-slate-600 mt-1">
+            Computer Science Undergraduate
+          </p>
+          <div class="mt-4 flex gap-3">
+            <a
+              href="mailto:fazilfrd9@gmail.com"
+              class="px-4 py-2 border rounded text-sm"
+              >Email</a
+            >
+            <a
+              href="https://github.com/Fazilfareed"
+              target="_blank"
+              rel="noopener"
+              class="px-4 py-2 border rounded text-sm"
+              >GitHub</a
+            >
+          </div>
+          <div class="mt-4 text-sm text-slate-600">
+            <p>
+              <span class="font-semibold">Location:</span> Badulla, Sri Lanka
+            </p>
+            <p>
+              <span class="font-semibold">University:</span>
+              <!-- org entity mentioned once below in chat only -->
+            </p>
+          </div>
+        </div>
 
-        <li> Ethical Hacking</li>
-        <ul>
-            <li>Hacking.lk</li>
-            <li>TryHackMe</li>
-        </ul>
-       
-    </ul>
-    
-    
-   
+        <div class="md:col-span-2">
+          <h2 class="text-xl font-semibold">Professional Summary</h2>
+          <p class="mt-3 text-slate-700 leading-relaxed text-justify">
+            I'm a dedicated Computer Science undergraduate with hands-on
+            experience in full-stack development (MERN), machine learning, and
+            networking. I enjoy competitive programming and researching ML
+            approaches for IoT security. I am currently expanding my
+            cybersecurity and cloud skills.
+          </p>
 
-    <h2><u>Skills</u></h2>
-    <ul>
-    <li><span class="boldText">Programming Languages:</span><br> Proficient in Python, Java, C++, and JavaScript.</li>
-    <li><span class="boldText">Algorithm Development:</span><br> Strong ability to design and implement efficient algorithms for complex problems.</li>
-    <li><span class="boldText">Problem-Solving:</span><br> Excellent analytical and critical thinking skills developed through participation in programming competitions.    </li>
-    <li><span class="boldText">Cybersecurity:</span><br> Foundational knowledge in cybersecurity principles and ethical hacking practices.</li>
-    <li><span class="boldText">Software Development:</span><br> Experience in developing and debugging software applications.</li>  
-    <li><span class="boldText">WordPress:</span><br> Skilled in setting up, customizing, and managing WordPress websites.</li>  
-    <li><span class="boldText">Database Management:</span><br> Proficient in using MongoDB and MySQL for database design, management, and querying.</li>
-    <li><span class="boldText">Spring Boot:</span><br> Experience in developing Java-based web applications using the Spring Boot framework.</li>
-    <li><span class="boldText">Collaboration:</span><br> Ability to work effectively in team settings, leveraging strong communication and interpersonal skills.</li>
-    <li><span class="boldText">Adaptability:</span><br> Quick to learn new technologies and adapt to different coding environments.</li>
-    <li><span class="boldText">Version Control:</span><br> Proficient in using Git for version control and collaborative development.</li>
-    <li><span class="boldText">Competitive Programming:</span><br> Experience in solving algorithmic problems under time constraints in a competitive setting.</li>
-    <li><span class="boldText">Project Management:</span><br> Basic understanding of project planning and execution through coursework and team projects.</li>
-    </ul>
+          <div class="mt-6 grid sm:grid-cols-2 gap-4">
+            <div>
+              <h3 class="font-semibold">Skills</h3>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <!-- badges -->
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >Python</span
+                >
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >Java</span
+                >
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >JavaScript</span
+                >
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >MERN</span
+                >
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >Machine Learning</span
+                >
+                <span class="px-3 py-1 bg-white border rounded-full text-sm"
+                  >Cybersecurity</span
+                >
+              </div>
+            </div>
 
-    
+            <div>
+              <h3 class="font-semibold">Contact</h3>
+              <p class="mt-2 text-sm text-slate-600">
+                Email:
+                <a href="mailto:fazilfrd9@gmail.com" class="text-warm"
+                  >fazilfrd9@gmail.com</a
+                >
+              </p>
+              <p class="text-sm text-slate-600">Phone: (+94) 72 975 5982</p>
+              <p class="text-sm text-slate-600">
+                Address: No 8B, Rathwaththa Mawatha, Badulla
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
+      <!-- PROJECTS -->
+      <section id="projects" class="mt-12">
+        <div class="flex items-center justify-between">
+          <h2 class="text-xl font-semibold">Projects</h2>
+          <div class="flex gap-2">
+            <button
+              data-filter="all"
+              class="filterBtn px-3 py-1 text-sm border rounded"
+            >
+              All
+            </button>
+            <button
+              data-filter="web"
+              class="filterBtn px-3 py-1 text-sm border rounded"
+            >
+              Web
+            </button>
+            <button
+              data-filter="ml"
+              class="filterBtn px-3 py-1 text-sm border rounded"
+            >
+              ML
+            </button>
+            <button
+              data-filter="iot"
+              class="filterBtn px-3 py-1 text-sm border rounded"
+            >
+              IoT
+            </button>
+          </div>
+        </div>
 
+        <div
+          id="projectsGrid"
+          class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        >
+          <!-- JS will render project cards here -->
+        </div>
+      </section>
 
+      <!-- EXPERIENCE / EDUCATION -->
+      <section id="experience" class="mt-12 grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-lg font-semibold">Experience</h3>
+          <ul class="mt-3 list-disc ml-5 text-slate-700">
+            <li>
+              Python Practical Assistant — University of Jaffna (Feb 2025 —
+              Present)
+            </li>
+            <li>Web Development Support — shop1.lk</li>
+          </ul>
+        </div>
 
+        <div>
+          <h3 class="text-lg font-semibold">Education</h3>
+          <ul class="mt-3 list-disc ml-5 text-slate-700">
+            <li>
+              BSc (Hons) in Computer Science — University of Jaffna (Expected
+              2026)
+            </li>
+            <li>
+              Certs: Fullstack Web (University of Moratuwa), GitHub for
+              Beginners (Microsoft)
+            </li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- CONTACT -->
+      <section id="contact" class="mt-12">
+        <h2 class="text-xl font-semibold">Get in touch</h2>
+        <p class="mt-3 text-slate-700">
+          Prefer email? Click below to open your mail client:
+        </p>
+        <div class="mt-4">
+          <a
+            href="mailto:fazilfrd9@gmail.com?subject=Contact%20from%20Portfolio"
+            class="ml-3 px-4 py-2 border rounded"
+            >Email me</a
+          >
+          <a
+            href="https://www.linkedin.com/in/mohomad-fazil/"
+            target="_blank"
+            rel="noopener"
+            class="ml-3 px-4 py-2 border rounded"
+            >LinkedIn</a
+          >
+        </div>
+      </section>
 
-    <h2><u>Certifications</u></h2>
-    <ul>
-    <li>Fullstack Web Development</li>
-    <ul><li>University of Moratuwa</li></ul>
+      <!-- FOOTER -->
+      <footer class="mt-12 text-center text-sm text-slate-500">
+        <p>
+          Built with HTML, Tailwind CSS & JavaScript — ©
+          <span id="yr"></span> Mohomad Fazil
+        </p>
+      </footer>
+    </main>
 
-    
-    <li>GitHub for Beginners</li>
-    <ul><li>Microsoft</li></ul>
-
-    <li>AI/ML for Beginners</li>
-    <ul><li>SLIIT</li></ul>
-    </ul>
-    
-
-
-
-
-
-
-
-</body>
+    <script src="app.js"></script>
+    <script>
+      // small inline script for year
+      document.getElementById("yr").textContent = new Date().getFullYear();
+      // mobile menu toggle
+      document.getElementById("menuBtn").addEventListener("click", () => {
+        document.getElementById("mobileNav").classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
