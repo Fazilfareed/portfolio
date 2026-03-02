@@ -32,68 +32,94 @@
     class="bg-slate-50 text-slate-800 dark:bg-[#0b1120] dark:text-slate-100 antialiased transition-colors duration-300"
   >
     <!-- NAV -->
-    <header
-      class="bg-white dark:bg-[#111827] shadow-sm sticky top-0 z-30 transition-colors"
-    >
-      <div
-        class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
-      >
-        <a href="#" class="flex items-center gap-3">
-          <img
-            src="assets/profile.png"
-            alt="Mohomad Fazil photo"
-            class="w-10 h-10 rounded-full object-cover border"
-          />
-          <span class="font-semibold">Mohomad Fazil</span>
+   <header
+  class="bg-white dark:bg-[#111827] shadow-sm sticky top-0 z-30 transition-colors"
+>
+  <div
+    class="max-w-5xl mx-auto px-6 py-3 flex items-center justify-between"
+  >
+    <!-- Logo -->
+    <a href="#" class="flex items-center gap-3">
+      <img
+        src="assets/profile.png"
+        alt="Mohomad Fazil photo"
+        class="w-10 h-10 rounded-full object-cover border border-slate-300 dark:border-slate-600"
+      />
+      <span class="font-semibold">Mohomad Fazil</span>
+    </a>
+
+    <!-- Right Side Controls -->
+    <div class="flex items-center gap-3">
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex gap-6 text-sm items-center">
+        <a href="#about" class="hover:text-warm dark:hover:text-sky-400 transition">About</a>
+        <a href="#projects" class="hover:text-warm dark:hover:text-sky-400 transition">Projects</a>
+        <a href="#experience" class="hover:text-warm dark:hover:text-sky-400 transition">Experience</a>
+        <a href="#contact" class="hover:text-warm dark:hover:text-sky-400 transition">Contact</a>
+        <a
+          href="cv.pdf"
+          class="px-3 py-1 border border-slate-300 dark:border-slate-600 rounded text-sm hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+        >
+          Download CV
         </a>
-        <nav class="hidden md:flex gap-6 text-sm">
-          <a href="#about" class="hover:text-warm">About</a>
-          <a href="#projects" class="hover:text-warm">Projects</a>
-          <a href="#experience" class="hover:text-warm">Experience</a>
-          <a href="#contact" class="hover:text-warm">Contact</a>
-          <a href="cv.pdf" class="px-3 py-1 border rounded text-sm"
-            >Download CV</a
-          >
-          <button
-            id="themeToggle"
-            class="p-2 rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition"
-          >
-            🌙
-          </button>
-        </nav>
+      </nav>
 
-        <!-- mobile menu toggle -->
-        <button id="menuBtn" class="md:hidden p-2 rounded hover:bg-slate-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 8h16M4 16h16"
-            />
-          </svg>
-        </button>
-      </div>
+      <!-- Theme Toggle (Visible Always) -->
+      <button
+        id="themeToggle"
+        class="p-2 rounded-full border border-slate-300 dark:border-slate-600 
+               hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+      >
+        🌙
+      </button>
 
-      <!-- mobile nav -->
-      <div id="mobileNav" class="md:hidden hidden border-t">
-        <div class="px-6 py-4 flex flex-col gap-3">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#experience">Experience</a>
-          <a href="#contact">Contact</a>
-          <a href="cv.pdf" class="inline-block mt-1 px-3 py-1 border rounded"
-            >Download CV</a
-          >
-        </div>
-      </div>
-    </header>
+      <!-- Mobile Menu Button -->
+      <button
+        id="menuBtn"
+        class="md:hidden p-2 rounded-full border border-slate-300 dark:border-slate-600 
+               hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 8h16M4 16h16"
+          />
+        </svg>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation -->
+  <div
+    id="mobileNav"
+    class="md:hidden hidden border-t border-slate-200 dark:border-slate-700 
+           bg-white dark:bg-[#111827] transition-colors"
+  >
+    <div class="px-6 py-4 flex flex-col gap-3 text-sm">
+      <a href="#about" class="hover:text-warm dark:hover:text-sky-400 transition">About</a>
+      <a href="#projects" class="hover:text-warm dark:hover:text-sky-400 transition">Projects</a>
+      <a href="#experience" class="hover:text-warm dark:hover:text-sky-400 transition">Experience</a>
+      <a href="#contact" class="hover:text-warm dark:hover:text-sky-400 transition">Contact</a>
+      <a
+        href="cv.pdf"
+        class="inline-block mt-1 px-3 py-1 border border-slate-300 dark:border-slate-600 
+               rounded hover:bg-slate-100 dark:hover:bg-slate-700 transition"
+      >
+        Download CV
+      </a>
+    </div>
+  </div>
+</header>
 
     <main class="max-w-5xl mx-auto px-6 py-10">
       <!-- HERO -->
