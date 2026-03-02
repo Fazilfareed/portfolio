@@ -31,11 +31,11 @@ function renderProjects(list) {
   container.innerHTML = '';
   list.forEach(p => {
     const card = document.createElement('article');
-    card.className = 'bg-white border rounded-lg p-4 shadow-sm flex flex-col';
+    card.className = 'bg-white dark:bg-[#111827] border dark:border-slate-700 rounded-lg p-4 shadow-sm flex flex-col transition-colors';
     card.innerHTML = `
       <img src="${p.img}" alt="${p.title} screenshot" class="w-full h-36 object-cover rounded-md" onerror="this.src='assets/projects/placeholder.png'"/>
       <h4 class="mt-3 font-semibold">${p.title}</h4>
-      <p class="mt-2 text-sm text-slate-600 flex-1">${p.desc}</p>
+      <p class="mt-2 text-sm text-slate-600 dark:text-slate-400 flex-1">${p.desc}</p>
       <div class="mt-3 flex items-center justify-between">
         <div class="flex gap-2">${p.tags.map(t => `<span class="px-2 py-1 text-xs border rounded">${t}</span>`).join('')}</div>
         <a href="${p.link}" target="_blank" rel="noopener" class="text-sm">View →</a>
